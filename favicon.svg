@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Fondo negro con bordes redondeados -->
+  <rect width="64" height="64" rx="14" fill="#0a0a0a"/>
+
+  <!-- Borde sutil -->
+  <rect width="64" height="64" rx="14" fill="none" stroke="#2a2a35" stroke-width="1.5"/>
+
+  <!-- Letra D en verde neón -->
+  <text
+    x="10"
+    y="50"
+    font-family="Montserrat, Arial Black, sans-serif"
+    font-weight="900"
+    font-size="50"
+    fill="#c8ff00"
+    letter-spacing="-2"
+  >D</text>
+
+  <!-- Punto decorativo acento violeta -->
+  <circle cx="52" cy="14" r="5" fill="#7c5cfc"/>
+</svg>
