@@ -178,19 +178,41 @@
           </a>
         </div>
       </div>
-      <form class="contact-form">
-        <input type="text" placeholder="Tu nombre" required />
-        <input type="text" placeholder="Tu negocio o rubro" />
-        <select>
+      <form class="contact-form" id="contact-form">
+        <input type="hidden" name="access_key" value="b98595ce-8d8c-4f87-a8d9-f33d1978146b" />
+        <input type="hidden" name="subject" value="Nuevo contacto desde Diaz Studio" />
+        <input type="hidden" name="from_name" value="Diaz Studio Web" />
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="text" name="negocio" placeholder="Tu negocio o rubro" />
+        <select name="servicio">
           <option value="" disabled selected>¿Qué servicio te interesa?</option>
           <option>Diseño Gráfico</option>
           <option>Redes Sociales</option>
           <option>Página Web</option>
           <option>Todo el paquete</option>
         </select>
-        <textarea placeholder="Contanos un poco más..." rows="4"></textarea>
+        <textarea name="mensaje" placeholder="Contanos un poco más..." rows="4"></textarea>
         <button type="submit" class="btn-primary">Enviar mensaje</button>
+        <p class="form-success" id="form-success">¡Mensaje enviado! Te contactamos pronto.</p>
       </form>
+
+      <script>
+        const form = document.getElementById('contact-form');
+        const success = document.getElementById('form-success');
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: data
+          });
+          if (res.ok) {
+            form.reset();
+            success.style.display = 'block';
+            setTimeout(() => success.style.display = 'none', 5000);
+          }
+        });
+      </script>
     </div>
   </section>
 
