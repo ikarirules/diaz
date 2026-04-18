@@ -12,8 +12,8 @@
   --dark:    #111115;
   --card-bg: #17171d;
   --border:  #2a2a35;
-  --accent:  #c8ff00;       /* verde neón — cambiable */
-  --accent2: #7c5cfc;       /* violeta */
+  --accent:  #f5c400;       /* amarillo dorado Orbita Digital */
+  --accent2: #cc9800;       /* dorado oscuro */
   --white:   #f5f5f5;
   --muted:   #888;
   --radius:  16px;
@@ -58,16 +58,45 @@ nav {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.logo-icon {
+  height: 44px;
+  width: auto;
+  display: block;
+  mix-blend-mode: screen;
+}
+
+.logo-icon--lg {
+  height: 58px;
+  width: auto;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-name {
   font-family: var(--font-head);
   font-weight: 900;
-  font-size: 1.4rem;
-  letter-spacing: -0.5px;
+  font-size: 1.35rem;
+  letter-spacing: 2px;
   color: var(--white);
 }
-.logo span {
-  color: var(--accent);
+
+.logo-sub {
+  font-family: var(--font-head);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  color: var(--accent);
+  text-transform: uppercase;
 }
 
 nav ul {
@@ -123,7 +152,7 @@ nav ul a:hover { color: var(--white); }
   border-radius: 50px;
   transition: border-color 0.2s, background 0.2s;
 }
-.btn-ghost:hover { border-color: var(--accent); background: rgba(200,255,0,0.07); }
+.btn-ghost:hover { border-color: var(--accent); background: rgba(245,196,0,0.07); }
 
 /* ===========================
    SECTION HELPERS
@@ -134,7 +163,7 @@ nav ul a:hover { color: var(--white); }
 }
 .section-tag {
   display: inline-block;
-  background: rgba(200,255,0,0.1);
+  background: rgba(245,196,0,0.1);
   color: var(--accent);
   font-size: 0.75rem;
   font-weight: 700;
@@ -275,7 +304,7 @@ nav ul a:hover { color: var(--white); }
 
 .service-card.featured {
   border-color: var(--accent);
-  background: linear-gradient(135deg, #17171d 0%, #1e1a2e 100%);
+  background: linear-gradient(135deg, #17171d 0%, #1e1a00 100%);
 }
 .service-card.featured:hover { border-color: var(--accent2); }
 
@@ -412,7 +441,7 @@ nav ul a:hover { color: var(--white); }
   transition: background 0.2s, border-color 0.2s;
 }
 .vb-chip:hover {
-  background: rgba(200,255,0,0.08);
+  background: rgba(245,196,0,0.08);
   border-color: var(--accent);
 }
 
@@ -599,7 +628,7 @@ nav ul a:hover { color: var(--white); }
 
 .form-success {
   display: none;
-  background: rgba(200,255,0,0.1);
+  background: rgba(245,196,0,0.1);
   border: 1px solid var(--accent);
   color: var(--accent);
   border-radius: 10px;

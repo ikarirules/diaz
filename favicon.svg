@@ -1,21 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <!-- Fondo negro con bordes redondeados -->
-  <rect width="64" height="64" rx="14" fill="#0a0a0a"/>
-
-  <!-- Borde sutil -->
-  <rect width="64" height="64" rx="14" fill="none" stroke="#2a2a35" stroke-width="1.5"/>
-
-  <!-- Letra D en verde neón -->
-  <text
-    x="10"
-    y="50"
-    font-family="Montserrat, Arial Black, sans-serif"
-    font-weight="900"
-    font-size="50"
-    fill="#c8ff00"
-    letter-spacing="-2"
-  >D</text>
-
-  <!-- Punto decorativo acento violeta -->
-  <circle cx="52" cy="14" r="5" fill="#7c5cfc"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="#0a0a0a" rx="14"/>
+  <!-- Planet circle -->
+  <circle cx="42" cy="50" r="26" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Orbit ring (tilted ellipse) -->
+  <ellipse cx="42" cy="50" rx="40" ry="14" fill="none" stroke="#f5c400" stroke-width="4"
+           transform="rotate(-28 42 50)"/>
+  <!-- Sphere on orbit -->
+  <circle cx="73" cy="23" r="9" fill="#f5c400"/>
+  <!-- Letter D (white path) -->
+  <path d="M27 30 L27 70 L44 70 C61 70 70 62 70 50 C70 38 61 30 44 30 Z" fill="white"/>
+  <path d="M35 38 L35 62 L44 62 C57 62 62 57 62 50 C62 43 57 38 44 38 Z" fill="#1a1a1a"/>
+  <!-- S letter (gold) -->
+  <text x="74" y="78"
+        font-family="'Arial Black', 'Montserrat', sans-serif"
+        font-weight="900"
+        font-size="22"
+        fill="#f5c400">S</text>
 </svg>
